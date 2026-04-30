@@ -1,30 +1,23 @@
-# DisableAudioFocus
+# GrapheneFixer
 
-This project is no longer actively maintained. However, I still use it personally, so I may fix issues if I encounter any problems.
+GrapheneOS prevents most XPosed modules from operating correctly because XPosed trips DCL code spawning protection.
 
-This module allows you to disable audio focus, enabling you to play multiple videos and audios simultaneously.
-
-## Features
-- Disables audio focus, allowing different apps and media to play audio at the same time.
+This module disables this protection for system modules. I don't know how to do this without also allowing DCL on all other system apps, so **BEWARE**.
 
 ## Installation and Usage
 
 ### 1. Download the APK
-Download the latest APK from [here](https://github.com/auag0/DisableAudioFocus/releases/latest) and install it on your device.
+Download the latest APK from [here](https://github.com/Enovale/GrapheneFixer/releases/latest) and install it on your device.
 
 ### 2. Enable the Module
 Enable the module in either Xposed or LSPosed.
 
-### 3. Disable Audio Focus
-To disable audio focus for all apps, select the "Recommended" option.
+### 3. Enable the right scopes
+Select the "Recommended" option, i.e. the `android` scope.
 
 ### 4. Reboot
 Reboot your device for the changes to take effect.
 
 ---
-
-## Notes
-- Disabling audio focus may cause audio conflicts in some apps.
-
 ## License
 This project is licensed under the [MIT License](LICENSE).

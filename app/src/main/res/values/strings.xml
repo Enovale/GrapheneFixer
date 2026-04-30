@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name" translatable="false">DisableAudioFocus</string>
-    <string name="module_description">Disable audio focus</string>
+    <string name="app_name" translatable="false">GrapheneFixer</string>
+    <string name="module_description">Fixes DCL so that other XPosed modules function properly.</string>
 </resources>

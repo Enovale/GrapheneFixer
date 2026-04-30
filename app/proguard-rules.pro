@@ -1,3 +1,3 @@
--keep class io.github.auag0.disableaudiofocus.MainHook
+-keep class com.enova.graphenefixer.MainHook
 -repackageclasses ""
 -allowaccessmodification

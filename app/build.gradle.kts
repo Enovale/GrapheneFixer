@@ -4,15 +4,15 @@ plugins {
 }
 
 android {
-    namespace = "io.github.auag0.disableaudiofocus"
+    namespace = "com.enova.graphenefixer"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "io.github.auag0.disableaudiofocus"
-        minSdk = 24
+        applicationId = "com.enova.graphenefixer"
+        minSdk = 26
         targetSdk = 35
-        versionCode = 101000
-        versionName = "1.1.0"
+        versionCode = 100010
+        versionName = "1.0.1"
     }
 
     signingConfigs {
