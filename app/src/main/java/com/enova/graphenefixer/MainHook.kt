@@ -1,5 +1,6 @@
 package com.enova.graphenefixer
 
+import android.content.pm.ApplicationInfo
 import de.robv.android.xposed.IXposedHookLoadPackage
 import de.robv.android.xposed.XC_MethodReplacement
 import de.robv.android.xposed.XposedBridge
@@ -17,8 +18,30 @@ class MainHook : IXposedHookLoadPackage {
             ),
             "getImmutableValue",
             object : XC_MethodReplacement() {
-                override fun replaceHookedMethod(p0: MethodHookParam?): Any {
-                    return false
+                override fun replaceHookedMethod(param: MethodHookParam?): Any? {
+                    val appInfo = param?.args[2] as? ApplicationInfo?
+                    if (appInfo != null && (appInfo.flags and ApplicationInfo.FLAG_SYSTEM) == 0) {
+                        param.setResult(null)
+                        return null
+                    }
+                    return XposedBridge.invokeOriginalMethod(
+                        param?.method,
+                        param?.thisObject,
+                        param?.args
+                    )
+                }
+            }
+        )
+
+        XposedBridge.hookAllMethods(
+            XposedHelpers.findClass(
+                "android.ext.settings.app.AswRestrictMemoryDynCodeLoading",
+                lpparam.classLoader
+            ),
+            "shouldAllowByDefaultToSystemPkg",
+            object : XC_MethodReplacement() {
+                override fun replaceHookedMethod(param: MethodHookParam?): Any {
+                    return true
                 }
             }
         )
