@@ -18,7 +18,7 @@ class MainHook : IXposedHookLoadPackage {
                 override fun replaceHookedMethod(param: MethodHookParam?): Any? {
                     val appInfo = param?.args[2] as? ApplicationInfo?
 
-                    // Settings has to always be allowed for the following patch
+                    // Settings has to always be allowed so that it can be patched as well.
                     if (appInfo != null && appInfo.packageName == "com.android.settings") {
                         return false
                     }
