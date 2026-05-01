@@ -5,14 +5,14 @@ plugins {
 
 android {
     namespace = "com.enova.graphenefixer"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.enova.graphenefixer"
         minSdk = 26
-        targetSdk = 35
-        versionCode = 100100
-        versionName = "1.1.0"
+        targetSdk = 36
+        versionCode = 100200
+        versionName = "1.2.0"
     }
 
     signingConfigs {
