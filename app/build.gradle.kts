@@ -11,8 +11,8 @@ android {
         applicationId = "com.enova.graphenefixer"
         minSdk = 26
         targetSdk = 36
-        versionCode = 100200
-        versionName = "1.2.0"
+        versionCode = 100201
+        versionName = "1.2.1"
     }
 
     signingConfigs {
